@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Original arcasHLA authors: Rose Orenbuch, Ioan Filip, Itsik Pe'er.
+# arcasHLA compatibility launcher, modified 2026-10-15.
+# GNU GPL version 3 or later. See LICENSE and CHANGELOG.md.
+set -euo pipefail
+root="$(cd "$(dirname "$0")" && pwd -P)"
+export PATH="${root}/bin:${PATH}"
+export PYTHONDONTWRITEBYTECODE=1
+python="${ARCASHLA_PYTHON:-python3}"
+case "${1:-}" in
+    extract|genotype|merge|reference|partial|customize|quant|convert)
+        subcommand="$1"
+        shift
+        if [[ " $* " != *" --help "* && " $* " != *" -h "* ]]; then
+            case "$subcommand" in
+                genotype|partial|reference|customize|quant)
+                    version="$(kallisto version 2>/dev/null || true)"
+                    case "$version" in
+                        "kallisto, version 0.44."*|"kallisto, version 0.48."*) ;;
+                        *)
+                            echo "arcasHLA requires compatible Kallisto 0.44.x or 0.48.x." >&2
+                            echo "Run: ${python} ${root}/scripts/setup_runtime.py --build-kallisto" >&2
+                            exit 1
+                            ;;
+                    esac
+                    ;;
+            esac
+        fi
+        exec "$python" "${root}/scripts/${subcommand}.py" "$@"
+        ;;
+    ""|-h|--help)
+        echo "Usage: arcasHLA <command> [options]"
+        echo "Commands: extract genotype partial customize quant merge convert reference"
+        echo "Run arcasHLA <command> --help for options."
+        ;;
+    *) echo "Unknown command: $1" >&2; exit 2 ;;
+esac

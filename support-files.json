@@ -1,0 +1,73 @@
+{
+  "upstream_repository": "https://github.com/RabadanLab/arcasHLA",
+  "upstream_ref": "157fabbc4bdb6a72cef1e608b9875ba06d8b4af5",
+  "files": {
+    "dat/info/hla_freq.tsv": {
+      "path": "dat/info/hla_freq.tsv",
+      "sha256": "fc48af59596b3436dc136f2dbf9d6b0bf2ce8f676eedcc52764d224383ea0e05",
+      "group": "typing"
+    },
+    "test/fixtures/test.bam": {
+      "path": "test/test.bam",
+      "sha256": "342717bcf88ee232cccc70baa5b201cf68f5cbddf93b28366334bff7ee7496dd",
+      "group": "test"
+    },
+    "test/fixtures/expected_output/test.genotype.json": {
+      "path": "test/expected_output/test.genotype.json",
+      "sha256": "f536c03ecc7855821c2fd5678a34bde9b2be87f883b02eeeebeda109175b2971",
+      "group": "test"
+    },
+    "test/fixtures/expected_output/test.partial_genotype.json": {
+      "path": "test/expected_output/test.partial_genotype.json",
+      "sha256": "dbf41106af037d99f5bdd31920acbee2e69bb014a4602439532b3fb0cf1d3920",
+      "group": "test"
+    },
+    "test/fixtures/expected_output/test.em.json": {
+      "path": "test/expected_output/test.em.json",
+      "sha256": "40c721fea174c58a91b2bc3f8969457032b4d464b9cb008714f5f0965862c48a",
+      "group": "test"
+    },
+    "dat/ref/GRCh38.all.noHLA.fasta": {
+      "path": "dat/ref/GRCh38.all.noHLA.fasta",
+      "sha256": "d6b75ae7a1f7513917047acd642f20e8d9ed510c269a68d50aa1f9e20952a84d",
+      "group": "quant",
+      "lfs": true
+    },
+    "dat/ref/cDNA.single.json": {
+      "path": "dat/ref/cDNA.single.json",
+      "sha256": "d96299ad8805c6fa2a1c884d4006dce436a8ecf8f372d55bd58c037443631a61",
+      "group": "quant",
+      "lfs": false
+    },
+    "dat/ref/cDNA.json": {
+      "path": "dat/ref/cDNA.json",
+      "sha256": "a2da8387b01902f6840443ca9b7fbfc410580781661b79620ebabd144a133a03",
+      "group": "quant",
+      "lfs": false
+    },
+    "dat/ref/hla_transcripts.json": {
+      "path": "dat/ref/hla_transcripts.json",
+      "sha256": "8b5555dcff6f604bd14d2f3d03ff962a89233dc8c86a6fa734712d208bb339a6",
+      "group": "quant",
+      "lfs": false
+    },
+    "dat/ref/allele_groups.json": {
+      "path": "dat/ref/allele_groups.json",
+      "sha256": "1f0247f49edd368118e925f78b38b89c38aeaf69255a3e1b34e1ab15c58eff05",
+      "group": "quant",
+      "lfs": false
+    },
+    "dat/ref/GRCh38.chr6.noHLA.fasta": {
+      "path": "dat/ref/GRCh38.chr6.noHLA.fasta",
+      "sha256": "a3d3b2846041e74f5e9edc61b0d4d8ba4c00b681f7989acf87b8e674cf8d1a6a",
+      "group": "quant",
+      "lfs": true
+    },
+    "dat/ref/GRCh38.chr6.HLA.fasta": {
+      "path": "dat/ref/GRCh38.chr6.HLA.fasta",
+      "sha256": "b0df533500a0b7418214bb36a05368155148415f1a557f0a05dde78afb248b00",
+      "group": "quant",
+      "lfs": true
+    }
+  }
+}

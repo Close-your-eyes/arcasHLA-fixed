@@ -1,0 +1,21 @@
+name: arcashla-fixed
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - numpy
+  - scipy>=1.9
+  - pandas
+  - biopython
+  - samtools>=1.19
+  - bedtools>=2.27
+  - pigz
+  - git
+  - git-lfs
+  - cmake
+  - make
+  - autoconf
+  - automake
+  - hdf5
+  - zlib
